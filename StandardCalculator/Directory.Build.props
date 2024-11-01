@@ -1,0 +1,5 @@
+﻿<Project>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion> <!-- Use 8.0 or latest as needed -->
+  </PropertyGroup>
+</Project>

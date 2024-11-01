@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="StandardCalculator.ScientificPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="#1E1E1E">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <!-- Navigation Bar -->
+        <Grid Background="#2D2D2D" Height="50" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Scientific Calculator"
+                       FontSize="18"
+                       Foreground="White"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="10,0"/>
+            <Button Content="Back" Click="BackToMain_Click" Background="Transparent" Foreground="White" FontSize="16" Margin="5" Grid.Column="1"/>
+        </Grid>
+
+        <!-- Scientific Display -->
+        <Border Background="#2D2D2D" CornerRadius="8" Padding="10" Margin="0,0,0,10">
+            <TextBlock Text="0"
+                       FontSize="48"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Right"
+                       Name="txtScientificResult"
+                       VerticalAlignment="Center"
+                       TextAlignment="Right"/>
+        </Border>
+
+        <!-- Scientific Buttons Layout -->
+        <Grid Margin="0,10,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Scientific Function Buttons -->
+            <Button Content="sin" Grid.Row="0" Grid.Column="0" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="sin"/>
+            <Button Content="cos" Grid.Row="0" Grid.Column="1" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="cos"/>
+            <Button Content="tan" Grid.Row="0" Grid.Column="2" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="tan"/>
+            <Button Content="ln" Grid.Row="0" Grid.Column="3" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="ln"/>
+            <Button Content="log" Grid.Row="1" Grid.Column="0" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="log"/>
+            <Button Content="√" Grid.Row="1" Grid.Column="1" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="sqrt"/>
+            <Button Content="^" Grid.Row="1" Grid.Column="2" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="pow"/>
+            <Button Content="π" Grid.Row="1" Grid.Column="3" Style="{StaticResource ScientificButtonStyle}" Click="ScientificFunction_Click" Tag="pi"/>
+        </Grid>
+    </StackPanel>
+</Page>
